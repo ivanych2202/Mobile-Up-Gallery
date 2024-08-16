@@ -9,10 +9,16 @@ import UIKit
 
 class AuthViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+    }
+    
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "AuthToMain", sender: sender)
     }
     
 

@@ -12,8 +12,15 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "MobileUp Gallery"
+        
+        let exitButton = UIBarButtonItem(title: "Выход", style: .plain, target: self, action: #selector(exitButtonPressed))
+        exitButton.tintColor = .black
+        navigationItem.rightBarButtonItem = exitButton
     }
 
+    @objc func exitButtonPressed() {
+        self.dismiss(animated: true)
+    }
 
 }

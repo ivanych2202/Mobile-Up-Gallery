@@ -57,15 +57,28 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIV-iH-l93">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WFz-uw-rFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="160" id="45w-I3-z4n"/>
+                            <constraint firstAttribute="bottom" secondItem="ZIV-iH-l93" secondAttribute="bottom" id="9sA-Bu-7Sj"/>
+                            <constraint firstItem="ZIV-iH-l93" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DT0-Qk-jZ7"/>
+                            <constraint firstItem="ZIV-iH-l93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="li0-Kv-9Fv"/>
+                            <constraint firstItem="ZIV-iH-l93" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nZf-bc-pY7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="opd-9j-0Ar" id="mph-ZL-hW7"/>
+                        <outlet property="webViewAuth" destination="ZIV-iH-l93" id="OgB-l9-4FN"/>
                         <segue destination="cnT-CF-5h9" kind="presentation" identifier="AuthToMain" modalPresentationStyle="fullScreen" id="5j3-Qz-2OO"/>
                     </connections>
                 </viewController>

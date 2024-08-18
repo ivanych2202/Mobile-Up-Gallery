@@ -30,11 +30,33 @@ class MainViewController: UIViewController {
         
         loadImages()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MainToPhoto" {
+            if let destinationVC = segue.destination as? PhotoViewController {
+                
+                if let imageIndex = sender as? Int {
+                    let urlString = images[imageIndex].mediumImageUrl
+                    let date = images[imageIndex].date
+                    destinationVC.date = date
+                    destinationVC.urlString = urlString
+                }
+                
+            }
+        }
+    }
 
     @objc func exitButtonPressed() {
         self.dismiss(animated: true)
     }
+    
+    
+    @objc func imageButtonTapped(_ sender: UIButton) {
+        let imageIndex = sender.tag
+        performSegue(withIdentifier: "MainToPhoto", sender: imageIndex)
+        
+    }
+
     
     private func loadImages() {
         ApiManager.shared.getImages { [weak self] images in
@@ -77,15 +99,11 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         
     }
     
-    
-    
-
-    @objc func imageButtonTapped(_ sender: UIButton) {
-        let imageIndex = sender.tag
-        let selectedImage = images[imageIndex]
-        print("Изображение выбрано: \(selectedImage)")
-        
-    }
 }
+
+
+
+
+
 
 

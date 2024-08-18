@@ -25,7 +25,7 @@ struct Image: Decodable {
     var orig_photo: OrigPhoto
     
     var mediumImageUrl: String? {
-        return sizes.first(where: { $0.type == "m" })?.url
+        return sizes.first(where: { $0.type == "q" })?.url
     }
 }
 

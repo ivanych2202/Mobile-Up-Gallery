@@ -26,8 +26,6 @@ class AuthViewController: UIViewController{
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-//        let url = URLComponents()
-        
         var urlComponent = URLComponents()
         urlComponent.scheme = "https"
         urlComponent.host = "oauth.vk.com"
@@ -46,6 +44,7 @@ class AuthViewController: UIViewController{
             showAlert()
         }
         webViewAuth.isHidden = false
+        
     }
     
     

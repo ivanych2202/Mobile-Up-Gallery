@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C42FF8D2C71115F00879CCE /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42FF8C2C71115F00879CCE /* Image.swift */; };
+		2C42FF8F2C71160A00879CCE /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42FF8E2C71160A00879CCE /* ApiManager.swift */; };
+		2C42FF922C7116A500879CCE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2C42FF912C7116A500879CCE /* Alamofire */; };
+		2C42FF942C7116A500879CCE /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 2C42FF932C7116A500879CCE /* AlamofireDynamic */; };
+		2C42FF972C71265D00879CCE /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2C42FF962C71265D00879CCE /* SDWebImage */; };
+		2C42FF992C71265D00879CCE /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2C42FF982C71265D00879CCE /* SDWebImageMapKit */; };
+		2C42FF9D2C71276500879CCE /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C42FF9C2C71276500879CCE /* ImageViewCell.swift */; };
+		2C42FF9F2C71282B00879CCE /* ImageViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C42FF9E2C71282B00879CCE /* ImageViewCell.xib */; };
 		2C85E7222C6E0476006A9236 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85E7212C6E0476006A9236 /* AppDelegate.swift */; };
 		2C85E7242C6E0476006A9236 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C85E7232C6E0476006A9236 /* SceneDelegate.swift */; };
 		2C85E7292C6E0476006A9236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C85E7272C6E0476006A9236 /* Main.storyboard */; };
@@ -19,6 +27,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C42FF8C2C71115F00879CCE /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		2C42FF8E2C71160A00879CCE /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		2C42FF9C2C71276500879CCE /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		2C42FF9E2C71282B00879CCE /* ImageViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewCell.xib; sourceTree = "<group>"; };
 		2C85E71E2C6E0476006A9236 /* Mobile Up Gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mobile Up Gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C85E7212C6E0476006A9236 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C85E7232C6E0476006A9236 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +49,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C42FF972C71265D00879CCE /* SDWebImage in Frameworks */,
+				2C42FF922C7116A500879CCE /* Alamofire in Frameworks */,
+				2C42FF992C71265D00879CCE /* SDWebImageMapKit in Frameworks */,
+				2C42FF942C7116A500879CCE /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C42FF892C71106A00879CCE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2C42FF8E2C71160A00879CCE /* ApiManager.swift */,
+				2C85E7352C6E09E1006A9236 /* AuthViewController.swift */,
+				2C85E7372C6E09F1006A9236 /* MainViewController.swift */,
+				2C85E7392C6E0A13006A9236 /* PhotoViewController.swift */,
+				2C85E73B2C6E0A22006A9236 /* VideoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2C42FF8A2C7110B000879CCE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2C42FF8C2C71115F00879CCE /* Image.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C42FF8B2C7110D400879CCE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C85E7272C6E0476006A9236 /* Main.storyboard */,
+				2C85E72C2C6E0478006A9236 /* LaunchScreen.storyboard */,
+				2C42FF9E2C71282B00879CCE /* ImageViewCell.xib */,
+				2C42FF9C2C71276500879CCE /* ImageViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		2C85E7152C6E0476006A9236 = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +111,10 @@
 			children = (
 				2C85E7212C6E0476006A9236 /* AppDelegate.swift */,
 				2C85E7232C6E0476006A9236 /* SceneDelegate.swift */,
-				2C85E7272C6E0476006A9236 /* Main.storyboard */,
-				2C85E7352C6E09E1006A9236 /* AuthViewController.swift */,
-				2C85E7372C6E09F1006A9236 /* MainViewController.swift */,
-				2C85E7392C6E0A13006A9236 /* PhotoViewController.swift */,
-				2C85E73B2C6E0A22006A9236 /* VideoViewController.swift */,
+				2C42FF8A2C7110B000879CCE /* Model */,
+				2C42FF8B2C7110D400879CCE /* View */,
+				2C42FF892C71106A00879CCE /* Controller */,
 				2C85E72A2C6E0478006A9236 /* Assets.xcassets */,
-				2C85E72C2C6E0478006A9236 /* LaunchScreen.storyboard */,
 				2C85E72F2C6E0478006A9236 /* Info.plist */,
 			);
 			path = "Mobile Up Gallery";
@@ -92,6 +136,12 @@
 			dependencies = (
 			);
 			name = "Mobile Up Gallery";
+			packageProductDependencies = (
+				2C42FF912C7116A500879CCE /* Alamofire */,
+				2C42FF932C7116A500879CCE /* AlamofireDynamic */,
+				2C42FF962C71265D00879CCE /* SDWebImage */,
+				2C42FF982C71265D00879CCE /* SDWebImageMapKit */,
+			);
 			productName = "Mobile Up Gallery";
 			productReference = 2C85E71E2C6E0476006A9236 /* Mobile Up Gallery.app */;
 			productType = "com.apple.product-type.application";
@@ -120,6 +170,10 @@
 				Base,
 			);
 			mainGroup = 2C85E7152C6E0476006A9236;
+			packageReferences = (
+				2C42FF902C7116A500879CCE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2C42FF952C71265D00879CCE /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 2C85E71F2C6E0476006A9236 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,6 +188,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C42FF9F2C71282B00879CCE /* ImageViewCell.xib in Resources */,
 				2C85E72E2C6E0478006A9236 /* LaunchScreen.storyboard in Resources */,
 				2C85E72B2C6E0478006A9236 /* Assets.xcassets in Resources */,
 				2C85E7292C6E0476006A9236 /* Main.storyboard in Resources */,
@@ -147,6 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C42FF8F2C71160A00879CCE /* ApiManager.swift in Sources */,
+				2C42FF9D2C71276500879CCE /* ImageViewCell.swift in Sources */,
+				2C42FF8D2C71115F00879CCE /* Image.swift in Sources */,
 				2C85E7222C6E0476006A9236 /* AppDelegate.swift in Sources */,
 				2C85E7362C6E09E1006A9236 /* AuthViewController.swift in Sources */,
 				2C85E73C2C6E0A22006A9236 /* VideoViewController.swift in Sources */,
@@ -383,6 +441,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C42FF902C7116A500879CCE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		2C42FF952C71265D00879CCE /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C42FF912C7116A500879CCE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C42FF902C7116A500879CCE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2C42FF932C7116A500879CCE /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C42FF902C7116A500879CCE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		2C42FF962C71265D00879CCE /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C42FF952C71265D00879CCE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		2C42FF982C71265D00879CCE /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C42FF952C71265D00879CCE /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C85E7162C6E0476006A9236 /* Project object */;
 }

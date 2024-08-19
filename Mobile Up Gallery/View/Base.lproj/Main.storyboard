@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -16,15 +16,15 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AuthViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" id="WFz-uw-rFJ">
-                                <rect key="frame" x="9" y="207" width="396" height="135"/>
+                            <view contentMode="scaleToFill" id="WFz-uw-rFJ">
+                                <rect key="frame" x="9" y="200" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mobile Up  Gallery" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="SRt-ee-AZU" userLabel="Mobile Up  Gallery">
-                                        <rect key="frame" x="24" y="10" width="348" height="115"/>
+                                        <rect key="frame" x="24" y="10" width="327" height="106"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -39,11 +39,11 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tEA-gw-ONP">
-                                <rect key="frame" x="9" y="797" width="396" height="99"/>
+                                <rect key="frame" x="9" y="758" width="375" height="94"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opd-9j-0Ar">
-                                        <rect key="frame" x="16" y="-11" width="364" height="57"/>
+                                        <rect key="frame" x="16" y="-11" width="343" height="52"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Вход через VK">
@@ -58,8 +58,9 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
-                            <wkWebView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZIV-iH-l93">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <wkWebView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZIV-iH-l93">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -69,13 +70,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="WFz-uw-rFJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="160" id="45w-I3-z4n"/>
-                            <constraint firstAttribute="bottom" secondItem="ZIV-iH-l93" secondAttribute="bottom" id="9sA-Bu-7Sj"/>
-                            <constraint firstItem="ZIV-iH-l93" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DT0-Qk-jZ7"/>
-                            <constraint firstItem="ZIV-iH-l93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="li0-Kv-9Fv"/>
-                            <constraint firstItem="ZIV-iH-l93" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nZf-bc-pY7"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="opd-9j-0Ar" id="mph-ZL-hW7"/>
@@ -91,22 +85,22 @@
         <scene sceneID="6TJ-9Q-FEy">
             <objects>
                 <viewController id="mCU-eU-Quf" customClass="MainViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Oy7-hq-C0c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oy7-hq-C0c">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9KB-v6-Alk">
-                                <rect key="frame" x="36" y="44" width="342" height="32"/>
+                                <rect key="frame" x="36" y="54" width="321" height="32"/>
                                 <segments>
                                     <segment title="Фото"/>
                                     <segment title="Видео"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedControlToggled:" destination="mCU-eU-Quf" eventType="valueChanged" id="v0Q-Ne-HQv"/>
+                                </connections>
                             </segmentedControl>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-JO-nIE">
-                                <rect key="frame" x="0.0" y="157" width="414" height="739"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YbL-JO-nIE">
+                                <rect key="frame" x="0.0" y="95" width="393" height="757"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <inset key="scrollIndicatorInsets" minX="1" minY="1" maxX="1" maxY="1"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="1" minimumInteritemSpacing="1" sectionInsetReference="layoutMargins" id="Lb2-JM-sAJ">
                                     <size key="itemSize" width="185" height="185"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -122,28 +116,25 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JP0-c6-ZeI">
-                                        <rect key="frame" x="221" y="8" width="185" height="185"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="zC3-Vp-1sF">
-                                            <rect key="frame" x="0.0" y="0.0" width="185" height="185"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="m60-ws-mqP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="9KB-v6-Alk" firstAttribute="leading" secondItem="Oy7-hq-C0c" secondAttribute="leadingMargin" constant="16" id="BQw-NP-8yt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9KB-v6-Alk" secondAttribute="trailing" constant="16" id="Q45-8Q-sCS"/>
-                            <constraint firstItem="9KB-v6-Alk" firstAttribute="top" secondItem="m60-ws-mqP" secondAttribute="top" id="XyN-Un-nMB"/>
+                            <constraint firstAttribute="trailing" secondItem="YbL-JO-nIE" secondAttribute="trailing" id="CX2-8j-whX"/>
+                            <constraint firstItem="9KB-v6-Alk" firstAttribute="top" secondItem="m60-ws-mqP" secondAttribute="top" constant="10" id="DYk-ok-lmg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9KB-v6-Alk" secondAttribute="trailing" constant="20" id="EMn-ss-qfN"/>
+                            <constraint firstItem="YbL-JO-nIE" firstAttribute="top" secondItem="9KB-v6-Alk" secondAttribute="bottom" constant="10" id="Fpt-uY-brp"/>
+                            <constraint firstAttribute="bottom" secondItem="YbL-JO-nIE" secondAttribute="bottom" id="K1S-YB-gFq"/>
+                            <constraint firstItem="YbL-JO-nIE" firstAttribute="leading" secondItem="Oy7-hq-C0c" secondAttribute="leading" id="Od5-Un-0uC"/>
+                            <constraint firstItem="9KB-v6-Alk" firstAttribute="leading" secondItem="Oy7-hq-C0c" secondAttribute="leadingMargin" constant="20" id="vMh-Nd-fpe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="H74-14-KzC"/>
                     <connections>
                         <outlet property="collectionView" destination="YbL-JO-nIE" id="QK7-5f-zGl"/>
+                        <outlet property="segmentedControl" destination="9KB-v6-Alk" id="8nc-1R-dm5"/>
                         <segue destination="chE-HA-R1k" kind="show" identifier="MainToPhoto" id="TVJ-2C-q60"/>
                         <segue destination="uuo-5L-jWT" kind="show" identifier="MainToVideo" id="WSg-IK-pAj"/>
                     </connections>
@@ -157,7 +148,7 @@
             <objects>
                 <viewController id="uuo-5L-jWT" customClass="VideoViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YSs-Tm-bPL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="uEv-Bg-2qr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -173,19 +164,19 @@
             <objects>
                 <viewController id="chE-HA-R1k" customClass="PhotoViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qtU-rl-WM0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="qcr-m5-woG">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="G6Z-eM-wkx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="icm-jg-ZCq">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="k3K-7E-Lf1">
+                        <barButtonItem key="leftBarButtonItem" id="k3K-7E-Lf1">
                             <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -215,7 +206,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cnT-CF-5h9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RuY-92-9Ch">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>

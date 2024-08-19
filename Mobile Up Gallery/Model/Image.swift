@@ -24,7 +24,7 @@ struct Image: Decodable {
     var has_tags: Bool
     var orig_photo: OrigPhoto
     
-    var mediumImageUrl: String? {
+    var imageUrl: String? {
         return sizes.first(where: { $0.type == "q" })?.url
     }
 }

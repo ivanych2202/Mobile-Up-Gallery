@@ -136,7 +136,7 @@
                         <outlet property="collectionView" destination="YbL-JO-nIE" id="QK7-5f-zGl"/>
                         <outlet property="segmentedControl" destination="9KB-v6-Alk" id="8nc-1R-dm5"/>
                         <segue destination="chE-HA-R1k" kind="show" identifier="MainToPhoto" id="TVJ-2C-q60"/>
-                        <segue destination="uuo-5L-jWT" kind="show" identifier="MainToVideo" id="WSg-IK-pAj"/>
+                        <segue destination="RfC-hh-4p3" kind="show" identifier="MainToVideo" id="hye-wy-SUa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUi-zS-jOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,20 +144,50 @@
             <point key="canvasLocation" x="2020.6106870229007" y="3.5211267605633805"/>
         </scene>
         <!--Video View Controller-->
-        <scene sceneID="38x-Ze-Tc5">
+        <scene sceneID="Sex-HL-RJG">
             <objects>
-                <viewController id="uuo-5L-jWT" customClass="VideoViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="YSs-Tm-bPL">
+                <viewController id="RfC-hh-4p3" customClass="VideoViewController" customModule="Mobile_Up_Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5CK-1y-8AF">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uEv-Bg-2qr"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ON2-d7-ImF">
+                                <rect key="frame" x="0.0" y="97" width="393" height="755"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i0j-9J-VeF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="o0r-HL-YGY"/>
+                    <navigationItem key="navigationItem" id="NAA-Nc-wCT">
+                        <barButtonItem key="leftBarButtonItem" id="cLp-Si-SIT">
+                            <imageReference key="image" image="chevron.backward" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonPressed:" destination="RfC-hh-4p3" id="aC8-yc-8ZD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ajm-dj-QKP">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="chE-HA-R1k" id="tNi-7w-wV1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backButton" destination="cLp-Si-SIT" id="2M1-uQ-bpv"/>
+                        <outlet property="shareButton" destination="Ajm-dj-QKP" id="KmJ-OR-o5w"/>
+                        <outlet property="webView" destination="ON2-d7-ImF" id="yaJ-PT-KYD"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="feo-je-KrW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rhb-8C-5JP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3023.6641221374043" y="412.67605633802822"/>
+            <point key="canvasLocation" x="3020.6106870229005" y="360.56338028169017"/>
         </scene>
         <!--Photo View Controller-->
         <scene sceneID="Vjd-GQ-eUz">

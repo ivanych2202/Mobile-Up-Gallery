@@ -47,6 +47,17 @@ class MainViewController: UIViewController {
                 }
             }
         }
+        if segue.identifier == "MainToVideo" {
+            if let destinationVC = segue.destination as? VideoViewController {
+                if let playerIndex = sender as? Int {
+                    let urlString = videos[playerIndex].player
+                    let videoTitle = videos[playerIndex].title
+                    destinationVC.urlString = urlString
+                    destinationVC.videoTitle = videoTitle
+                }
+            }
+        }
+
     }
 
     
@@ -74,6 +85,8 @@ class MainViewController: UIViewController {
         let index = sender.tag
         if segmentedControl.selectedSegmentIndex == 0 {
             performSegue(withIdentifier: "MainToPhoto", sender: index)
+        } else {
+            performSegue(withIdentifier: "MainToVideo", sender: index)
         }
     }
 

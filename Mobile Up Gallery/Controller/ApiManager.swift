@@ -67,4 +67,36 @@ class ApiManager {
             }
         }
     }
+    
+    func isTokenValid(completion: @escaping (Bool) -> Void) {
+        guard let userToken = UserDefaults.standard.string(forKey: "userToken"), !userToken.isEmpty else {
+            completion(false)
+            return
+        }
+        
+        let url = "https://api.vk.com/method/users.get"
+        let params: Parameters = [
+            "access_token": userToken,
+            "v": "5.199"
+        ]
+
+        AF.request(url, method: .get, parameters: params).response { response in
+            if let data = response.data {
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    if let dict = json as? [String: Any],
+                       let response = dict["response"] as? [[String: Any]],
+                       !response.isEmpty {
+                        completion(true)
+                    }
+                } catch {
+                    print("Failed to decode token")
+                    completion(false)
+                }
+            }
+        }
+    }
 }
+
+
+

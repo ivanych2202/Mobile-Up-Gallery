@@ -16,6 +16,15 @@ class AuthViewController: UIViewController {
         
         webViewAuth.navigationDelegate = self
         webViewAuth.isHidden = true
+        
+        ApiManager.shared.isTokenValid { isValid in
+            if isValid {
+                self.performSegue(withIdentifier: "AuthToMain", sender: self)
+            } else {
+                self.webViewAuth.isHidden = false
+            }
+        }
+
     }
 
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -76,4 +85,3 @@ extension AuthViewController: WKNavigationDelegate {
             }
         }
     }
-

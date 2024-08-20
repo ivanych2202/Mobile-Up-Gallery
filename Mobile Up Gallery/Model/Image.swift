@@ -19,13 +19,8 @@ struct Image: Decodable {
     var date: Int
     var sizes: [Size]
     var text: String
-    var user_id: Int
-    var web_view_token: String
-    var has_tags: Bool
-    var orig_photo: OrigPhoto
-    
     var imageUrl: String? {
-        return sizes.first(where: { $0.type == "q" })?.url
+        return sizes.first(where: { $0.type == "q" })?.url ?? sizes.first?.url
     }
 }
 
@@ -36,9 +31,4 @@ struct Size: Decodable {
     var url: String
 }
 
-struct OrigPhoto: Decodable {
-    var height: Int
-    var type: String
-    var url: String
-    var width: Int
-}
+

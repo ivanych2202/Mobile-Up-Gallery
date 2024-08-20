@@ -20,8 +20,6 @@ class AuthViewController: UIViewController {
         ApiManager.shared.isTokenValid { isValid in
             if isValid {
                 self.performSegue(withIdentifier: "AuthToMain", sender: self)
-            } else {
-                self.webViewAuth.isHidden = false
             }
         }
 

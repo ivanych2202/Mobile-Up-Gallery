@@ -18,16 +18,12 @@ class VideoViewController: UIViewController {
     var videoTitle: String?
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        webView.navigationDelegate = self
-        
+        super.viewDidLoad()        
         setupWebView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        exitFullScreen()
     }
     
     @IBAction func backButtonPressed(_ sender: UIBarButtonItem) {
@@ -49,19 +45,3 @@ class VideoViewController: UIViewController {
     }
     
 }
-
-
-extension VideoViewController: WKNavigationDelegate {
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-    }
-    
-    func enterFullScreen() {
-        navigationController?.setNavigationBarHidden(true, animated: true)
-    }
-    
-    func exitFullScreen() {
-        navigationController?.setNavigationBarHidden(false, animated: true)
-    }
-}
-

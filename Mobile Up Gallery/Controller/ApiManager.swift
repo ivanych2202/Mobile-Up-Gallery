@@ -10,7 +10,7 @@ import Alamofire
 
 class ApiManager {
     static let shared = ApiManager()
-
+    
     func getImages(completion: @escaping ([Image]) -> ()) {
         guard let userToken = UserDefaults.standard.string(forKey: "userToken"), !userToken.isEmpty else {
             print("User token is missing")
@@ -23,7 +23,7 @@ class ApiManager {
             "album_id": "266276915",
             "v": "5.199"
         ]
-
+        
         AF.request(url, method: .post, parameters: params).response { result in
             if let data = result.data {
                 do {
@@ -38,32 +38,38 @@ class ApiManager {
             }
         }
     }
-
+    
     func getVideos(completion: @escaping ([Video]) -> ()) {
         guard let userToken = UserDefaults.standard.string(forKey: "userToken"), !userToken.isEmpty else {
             print("User token is missing")
+            completion([])
             return
         }
-
+        
         let url = "https://api.vk.com/method/video.get"
         let params: Parameters = [
             "access_token": userToken,
             "owner_id": "-128666765",
-            "album_id": 1, 
+            "album_id": 0,
             "v": "5.199"
         ]
-
+        
         AF.request(url, method: .post, parameters: params).response { result in
             if let data = result.data {
                 do {
                     let videosResponse = try JSONDecoder().decode(VideosResponse.self, from: data)
-                    let videos = videosResponse.response.items
-                    completion(videos)
+                    // Фильтруем видео, исключая те, которые содержат YouTube в URL
+                    let filteredVideos = videosResponse.response.items.filter { video in
+                        return !video.player.lowercased().contains("youtube")
+                    }
+                    completion(filteredVideos)
                 } catch {
                     print("Failed to decode videos: \(error)")
+                    completion([])
                 }
             } else {
                 print("No data received")
+                completion([])
             }
         }
     }
@@ -79,7 +85,7 @@ class ApiManager {
             "access_token": userToken,
             "v": "5.199"
         ]
-
+        
         AF.request(url, method: .get, parameters: params).response { response in
             if let data = response.data {
                 do {
@@ -97,6 +103,4 @@ class ApiManager {
         }
     }
 }
-
-
 

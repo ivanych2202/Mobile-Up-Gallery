@@ -15,19 +15,11 @@ struct VideoResponse: Decodable {
 }
 
 struct Video: Decodable {
-    var id: Int
-    var owner_id: Int
     var title: String
-    var duration: Int
-    var description: String?
-    var date: Int
-    var views: Int?
     var player: String
     var image: [VideoImage]?
-    
     var imageUrl: String? {
-        return image?.first(where: { $0.width >= 700 && $0.height >= 300 })?.url
-
+        return image?.first(where: { $0.width >= 400 && $0.height >= 300 })?.url ?? image?.first?.url
     }
 }
 
@@ -35,7 +27,6 @@ struct VideoImage: Decodable {
     var url: String
     var width: Int
     var height: Int
-    var with_padding: Int?
 }
 
 
